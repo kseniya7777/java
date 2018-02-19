@@ -26,22 +26,22 @@ public class Calculater {
         if (choice.equals("/"))
             task3_4(A, B);
     }
-
+    /*calculating the sum*/
     public void task3_1(int a, int b) {
         int sum = a + b;
         System.out.println(+ a + "+" + b + "=" + sum);
     }
-
+    /*calculating the difference*/
     public void task3_2(int a, int b) {
         int dif = a - b;
         System.out.println( a + "-" + b + "=" + dif);
     }
-
+    /*calculating the multiplication*/
     public void task3_3(int a, int b) {
         int mult = a * b;
         System.out.println(a + "*" + b + "=" + mult);
     }
-
+    /*calculating the division*/
     public void task3_4(int a, int b) {
         int div = a / b;
         System.out.println(a + "/" + b + "=" + div);

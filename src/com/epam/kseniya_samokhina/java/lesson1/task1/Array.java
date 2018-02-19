@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class Array {
     public void startArray() {
-        /*Генерация исходного массива*/
+        /*Generation of the source array*/
         ArrayList<Integer> arr = new ArrayList<>();
         int c = 0;
         while (c != 20) {
@@ -22,7 +22,7 @@ public class Array {
         task1_5(arr);
         task1_6(arr);
     }
-    /*Задание 1*/
+    /*Task 1_1*/
     public static void task1_1 (ArrayList<Integer> arr)
     {
         ArrayList<Integer> arr1 = new ArrayList<>();
@@ -44,7 +44,7 @@ public class Array {
         Collections.swap(arr1, pos1, pos2);
         System.out.println("Result 1: " + arr1);
     }
-    /*Задание 2*/
+    /*Task 1_2*/
     public static void task1_2 (ArrayList<Integer> arr)
     {
         int sum_of_elements = 0;
@@ -54,7 +54,7 @@ public class Array {
         }
         System.out.println("Result 2: " + sum_of_elements);
     }
-    /*Задание 3*/
+    /*Task 1_3*/
     public static void task1_3 (ArrayList<Integer> arr)
     {
         ArrayList<Integer> arr3 = new ArrayList<>();
@@ -65,7 +65,7 @@ public class Array {
         }
         System.out.println("Result 3: " + arr3);
     }
-    /*Задание 4*/
+    /*Task 1_4*/
     public static void task1_4 (ArrayList<Integer> arr)
     {
         ArrayList<Integer> arr4 = new ArrayList<>();
@@ -76,7 +76,7 @@ public class Array {
         }
         System.out.println("Result 4: " + arr4);
     }
-    /*Задание 5*/
+    /*Task 1_5*/
     public static void task1_5 (ArrayList<Integer> arr)
     {
         int sumall = 0;
@@ -87,7 +87,7 @@ public class Array {
         int min_elem = Collections.min(arr);
         System.out.println("Result 5: " + Math.abs(medium - min_elem));
     }
-    /*Задание 6*/
+    /*Task 1_6*/
     public static void task1_6 (ArrayList<Integer> arr)
     {
         HashMap<Integer, Integer> p = new HashMap<>();

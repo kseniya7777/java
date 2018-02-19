@@ -8,7 +8,7 @@ public class Strings {
     public void startStrings() {
         System.out.println("Enter n");
         Scanner sc = new Scanner(System.in);
-        /*Ввод строк*/
+        /*Input strings*/
         ArrayList<String> arr_strings = new ArrayList<>();
         int n = sc.nextInt();
         for (int i = 0; i < n; i++) {
@@ -21,7 +21,7 @@ public class Strings {
         task2_5(arr_strings);
         task2_6(arr_strings);
     }
-    /*Задание 1*/
+    /*Task 2_1*/
     public void task2_1(ArrayList<String> arr_strings) {
         String min="";
         String max="";
@@ -41,7 +41,7 @@ public class Strings {
         }
         System.out.println("Result 1: short string: "+min+" with length "+minlength+", long string: "+max+" with length "+maxlength);
     }
-    /*Задание 2*/
+    /*Task 2_2*/
     public void task2_2(ArrayList<String> arr_strings)
     {
         int sum_l=0;
@@ -55,7 +55,7 @@ public class Strings {
                 System.out.print(arr_strings.get(i)+" - "+arr_strings.get(i).length()+"; ");
         }
     }
-    /*Задание 3*/
+    /*Task 2_3*/
     public void task2_3(ArrayList<String> arr_strings)
     {
         int sum_l=0;
@@ -69,7 +69,7 @@ public class Strings {
                 System.out.print(arr_strings.get(i)+" - "+arr_strings.get(i).length()+"; ");
         }
     }
-    /*Задание 4*/
+    /*Task 2_4*/
     public void task2_4(ArrayList<String> arr_strings)
     {
         String word="";
@@ -86,7 +86,7 @@ public class Strings {
         }
         System.out.println("\nResult 4: "+word);
     }
-    /*Задание 5*/
+    /*Task 2_5*/
     public void task2_5(ArrayList<String> arr_strings)
     {
         String word="";
@@ -101,7 +101,7 @@ public class Strings {
         }
         System.out.println("Result 5: "+word);
     }
-    /*Задание 6*/
+    /*Task 2_6*/
     public void task2_6(ArrayList<String> arr_strings)
     {
         ArrayList<String> words_dig=new ArrayList<>();

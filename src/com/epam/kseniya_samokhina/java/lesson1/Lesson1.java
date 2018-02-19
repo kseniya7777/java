@@ -12,16 +12,19 @@ public class Lesson1 {
         System.out.println("Enter 1 for task1, 2 for task2, 3 for task3");
         int choice = sc.nextInt();
         switch (choice) {
+            /*task1*/
             case 1: {
                 Array app = new Array();
                 app.startArray();
                 break;
             }
+            /*task2*/
             case 2: {
                 Strings app = new Strings();
                 app.startStrings();
                 break;
             }
+            /*task3*/
             case 3: {
                 Calculater app = new Calculater();
                 app.startCalculater();
