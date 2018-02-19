@@ -6,11 +6,12 @@ import java.util.Scanner;
 
 public class Strings {
     public void startStrings() {
-        System.out.println("Enter n");
+        System.out.println("Enter the number of strings");
         Scanner sc = new Scanner(System.in);
         /*Input strings*/
         ArrayList<String> arr_strings = new ArrayList<>();
         int n = sc.nextInt();
+        System.out.println("Enter strings");
         for (int i = 0; i < n; i++) {
             arr_strings.add(sc.next());
         }
@@ -116,6 +117,10 @@ public class Strings {
         }
         if(words_dig.size()>1)
             System.out.println("Result 6: "+words_dig.get(1));
-        else System.out.println("Result 6: "+words_dig.get(0));
+        else
+            if(words_dig.size()==1)
+                System.out.println("Result 6: "+words_dig.get(0));
+        else
+                System.out.println("Result 6: Word not found");
     }
 }
