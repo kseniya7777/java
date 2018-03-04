@@ -2,7 +2,7 @@ package com.epam.kseniya_samokhina.java.lesson1;
 
 import com.epam.kseniya_samokhina.java.lesson1.task1.Array;
 import com.epam.kseniya_samokhina.java.lesson1.task2.Strings;
-import com.epam.kseniya_samokhina.java.lesson1.task3.Calculater;
+import com.epam.kseniya_samokhina.java.lesson1.task3.Calculator;
 
 import java.util.Scanner;
 
@@ -26,8 +26,8 @@ public class Lesson1 {
             }
             /*task3*/
             case 3: {
-                Calculater app = new Calculater();
-                app.startCalculater();
+                Calculator app = new Calculator();
+                app.startCalculator();
                 break;
             }
         }

@@ -15,16 +15,16 @@ public class Array {
         }
         System.out.println("Source array: " + arr);
 
-        task1_1(arr);
-        task1_2(arr);
-        task1_3(arr);
-        task1_4(arr);
-        task1_5(arr);
-        task1_6(arr);
+        swapMaximumAndMinimum(arr);
+        sumOfElementsOnTheEvenPositions(arr);
+        replacementOfNegativeNumbersByZeros(arr);
+        tripleEachPositiveElementBeforeTheNegativeElement(arr);
+        differenceBetweenTheArithmeticMeanAndTheMinimumElement(arr);
+        OutputAllElementsThatOccurMoreThanOnceAndWhosIndicesAreEven(arr);
     }
+
     /*Task 1_1*/
-    public static void task1_1 (ArrayList<Integer> arr)
-    {
+    public void swapMaximumAndMinimum(ArrayList<Integer> arr) {
         ArrayList<Integer> arr1 = new ArrayList<>();
         arr1.addAll(arr);
         int max = -10;
@@ -44,19 +44,19 @@ public class Array {
         Collections.swap(arr1, pos1, pos2);
         System.out.println("Result 1: " + arr1);
     }
+
     /*Task 1_2*/
-    public static void task1_2 (ArrayList<Integer> arr)
-    {
-        int sum_of_elements = 0;
+    public void sumOfElementsOnTheEvenPositions(ArrayList<Integer> arr) {
+        int sumOfElements = 0;
         for (int i = 0; i < arr.size(); i++) {
             if (i % 2 == 0)
-                sum_of_elements += arr.get(i);
+                sumOfElements += arr.get(i);
         }
-        System.out.println("Result 2: " + sum_of_elements);
+        System.out.println("Result 2: " + sumOfElements);
     }
+
     /*Task 1_3*/
-    public static void task1_3 (ArrayList<Integer> arr)
-    {
+    public void replacementOfNegativeNumbersByZeros(ArrayList<Integer> arr) {
         ArrayList<Integer> arr3 = new ArrayList<>();
         arr3.addAll(arr);
         for (int i = 0; i < arr3.size(); i++) {
@@ -65,9 +65,9 @@ public class Array {
         }
         System.out.println("Result 3: " + arr3);
     }
+
     /*Task 1_4*/
-    public static void task1_4 (ArrayList<Integer> arr)
-    {
+    public void tripleEachPositiveElementBeforeTheNegativeElement(ArrayList<Integer> arr) {
         ArrayList<Integer> arr4 = new ArrayList<>();
         arr4.addAll(arr);
         for (int i = 0; i + 1 < arr4.size(); i++) {
@@ -76,20 +76,20 @@ public class Array {
         }
         System.out.println("Result 4: " + arr4);
     }
+
     /*Task 1_5*/
-    public static void task1_5 (ArrayList<Integer> arr)
-    {
+    public void differenceBetweenTheArithmeticMeanAndTheMinimumElement(ArrayList<Integer> arr) {
         int sumall = 0;
         for (int i = 0; i < arr.size(); i++) {
             sumall += arr.get(i);
         }
         int medium = sumall / arr.size();
-        int min_elem = Collections.min(arr);
-        System.out.println("Result 5: " + Math.abs(medium - min_elem));
+        int minElem = Collections.min(arr);
+        System.out.println("Result 5: " + Math.abs(medium - minElem));
     }
+
     /*Task 1_6*/
-    public static void task1_6 (ArrayList<Integer> arr)
-    {
+    public void OutputAllElementsThatOccurMoreThanOnceAndWhosIndicesAreEven(ArrayList<Integer> arr) {
         HashMap<Integer, Integer> p = new HashMap<>();
         for (int i = 0; i < arr.size(); i++) {
             if (p.containsKey(arr.get(i))) {

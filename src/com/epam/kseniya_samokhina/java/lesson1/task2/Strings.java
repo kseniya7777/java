@@ -9,118 +9,116 @@ public class Strings {
         System.out.println("Enter the number of strings");
         Scanner sc = new Scanner(System.in);
         /*Input strings*/
-        ArrayList<String> arr_strings = new ArrayList<>();
+        ArrayList<String> arrayStrings = new ArrayList<>();
         int n = sc.nextInt();
         System.out.println("Enter strings");
         for (int i = 0; i < n; i++) {
-            arr_strings.add(sc.next());
+            arrayStrings.add(sc.next());
         }
-        task2_1(arr_strings);
-        task2_2(arr_strings);
-        task2_3(arr_strings);
-        task2_4(arr_strings);
-        task2_5(arr_strings);
-        task2_6(arr_strings);
+        searchEndOutputOfTheShortestAndLongestStringAndTheirLength(arrayStrings);
+        outputOfLinesThatAreLongerThanTheAverageLengthAndTheirLength(arrayStrings);
+        outputOfLinesWhoseLengthIsLessThanTheAverageLengthAndTheirLength(arrayStrings);
+        searchEndOutputTheFirstWordInWhichTheNumberOfDifferentCharactersIsMinimally(arrayStrings);
+        searchEndOutputTheFirstWordInWhichAllTheCharactersAreDifferent(arrayStrings);
+        searchEndOutputWordFromNumbers(arrayStrings);
     }
+
     /*Task 2_1*/
-    public void task2_1(ArrayList<String> arr_strings) {
-        String min="";
-        String max="";
+    public void searchEndOutputOfTheShortestAndLongestStringAndTheirLength(ArrayList<String> arrayStrings) {
+        String minLine = "";
+        String maxLine = "";
         int minlength = 1000000000;
-        int maxlength=0;
-        for (int i = 0; i < arr_strings.size(); i++) {
-            if(arr_strings.get(i).length()<minlength)
-            {
-                min=arr_strings.get(i);
-                minlength=arr_strings.get(i).length();
+        int maxlength = 0;
+        for (int i = 0; i < arrayStrings.size(); i++) {
+            if (arrayStrings.get(i).length() < minlength) {
+                minLine = arrayStrings.get(i);
+                minlength = arrayStrings.get(i).length();
             }
-            if(arr_strings.get(i).length()>maxlength)
-            {
-                max=arr_strings.get(i);
-                maxlength=arr_strings.get(i).length();
+            if (arrayStrings.get(i).length() > maxlength) {
+                maxLine = arrayStrings.get(i);
+                maxlength = arrayStrings.get(i).length();
             }
         }
-        System.out.println("Result 1: short string: "+min+" with length "+minlength+", long string: "+max+" with length "+maxlength);
+        System.out.println("Result 1: short string: " + minLine + " with length " + minlength + ", long string: " + maxLine + " with length " + maxlength);
     }
+
     /*Task 2_2*/
-    public void task2_2(ArrayList<String> arr_strings)
-    {
-        int sum_l=0;
-        for (int i = 0; i < arr_strings.size(); i++) {
-            sum_l+=arr_strings.get(i).length();
+    public void outputOfLinesThatAreLongerThanTheAverageLengthAndTheirLength(ArrayList<String> arrayStrings) {
+        int sumLength = 0;
+        for (int i = 0; i < arrayStrings.size(); i++) {
+            sumLength += arrayStrings.get(i).length();
         }
-        int av_l=sum_l/arr_strings.size();
+        int averageLength = sumLength / arrayStrings.size();
         System.out.print("Result 2: ");
-        for (int i = 0; i < arr_strings.size(); i++) {
-            if(arr_strings.get(i).length()>av_l)
-                System.out.print(arr_strings.get(i)+" - "+arr_strings.get(i).length()+"; ");
+        for (int i = 0; i < arrayStrings.size(); i++) {
+            if (arrayStrings.get(i).length() > averageLength)
+                System.out.print(arrayStrings.get(i) + " - " + arrayStrings.get(i).length() + "; ");
         }
     }
+
     /*Task 2_3*/
-    public void task2_3(ArrayList<String> arr_strings)
-    {
-        int sum_l=0;
-        for (int i = 0; i < arr_strings.size(); i++) {
-            sum_l+=arr_strings.get(i).length();
+    public void outputOfLinesWhoseLengthIsLessThanTheAverageLengthAndTheirLength(ArrayList<String> arrayStrings) {
+        int sumLength = 0;
+        for (int i = 0; i < arrayStrings.size(); i++) {
+            sumLength += arrayStrings.get(i).length();
         }
-        int av_l=sum_l/arr_strings.size();
+        int averageLength = sumLength / arrayStrings.size();
         System.out.print("\nResult 3: ");
-        for (int i = 0; i < arr_strings.size(); i++) {
-            if(arr_strings.get(i).length()<av_l)
-                System.out.print(arr_strings.get(i)+" - "+arr_strings.get(i).length()+"; ");
+        for (int i = 0; i < arrayStrings.size(); i++) {
+            if (arrayStrings.get(i).length() < averageLength)
+                System.out.print(arrayStrings.get(i) + " - " + arrayStrings.get(i).length() + "; ");
         }
     }
+
     /*Task 2_4*/
-    public void task2_4(ArrayList<String> arr_strings)
-    {
-        String word="";
-        int min_difchar=10000;
-        for (int i = 0; i <arr_strings.size() ; i++) {
+    public void searchEndOutputTheFirstWordInWhichTheNumberOfDifferentCharactersIsMinimally(ArrayList<String> arrayStrings) {
+        String word = "";
+        int minDifchar = 10000;
+        for (int i = 0; i < arrayStrings.size(); i++) {
             HashSet<Character> difchar = new HashSet<>();
-            for (int j = 0; j < arr_strings.get(i).length(); j++) {
-                difchar.add(arr_strings.get(i).charAt(j));
+            for (int j = 0; j < arrayStrings.get(i).length(); j++) {
+                difchar.add(arrayStrings.get(i).charAt(j));
             }
-                if(difchar.size()<min_difchar){
-                    min_difchar=difchar.size();
-                    word=arr_strings.get(i);
-                }
+            if (difchar.size() < minDifchar) {
+                minDifchar = difchar.size();
+                word = arrayStrings.get(i);
+            }
         }
-        System.out.println("\nResult 4: "+word);
+        System.out.println("\nResult 4: " + word);
     }
+
     /*Task 2_5*/
-    public void task2_5(ArrayList<String> arr_strings)
-    {
-        String word="";
-        for (int i=arr_strings.size()-1; i >=0 ; i--) {
+    public void searchEndOutputTheFirstWordInWhichAllTheCharactersAreDifferent(ArrayList<String> arrayStrings) {
+        String word = "";
+        for (int i = arrayStrings.size() - 1; i >= 0; i--) {
             HashSet<Character> difchar = new HashSet<>();
-            for (int j = 0; j < arr_strings.get(i).length(); j++) {
-                difchar.add(arr_strings.get(i).charAt(j));
+            for (int j = 0; j < arrayStrings.get(i).length(); j++) {
+                difchar.add(arrayStrings.get(i).charAt(j));
             }
-            if(difchar.size()==arr_strings.get(i).length()){
-                word=arr_strings.get(i);
+            if (difchar.size() == arrayStrings.get(i).length()) {
+                word = arrayStrings.get(i);
             }
         }
-        System.out.println("Result 5: "+word);
+        System.out.println("Result 5: " + word);
     }
+
     /*Task 2_6*/
-    public void task2_6(ArrayList<String> arr_strings)
-    {
-        ArrayList<String> words_dig=new ArrayList<>();
-        for (int i = 0; i <arr_strings.size() ; i++) {
-            String word_dig="";
-            for (int j = 0; j < arr_strings.get(i).length(); j++) {
-               if(Character.isDigit(arr_strings.get(i).charAt(j)))
-                   word_dig+=arr_strings.get(i).charAt(j);
+    public void searchEndOutputWordFromNumbers(ArrayList<String> arrayStrings) {
+        ArrayList<String> wordsDigit = new ArrayList<>();
+        for (int i = 0; i < arrayStrings.size(); i++) {
+            String wordDigit = "";
+            for (int j = 0; j < arrayStrings.get(i).length(); j++) {
+                if (Character.isDigit(arrayStrings.get(i).charAt(j)))
+                    wordDigit += arrayStrings.get(i).charAt(j);
             }
-            if(arr_strings.get(i).length()==word_dig.length())
-                words_dig.add(word_dig);
+            if (arrayStrings.get(i).length() == wordDigit.length())
+                wordsDigit.add(wordDigit);
         }
-        if(words_dig.size()>1)
-            System.out.println("Result 6: "+words_dig.get(1));
+        if (wordsDigit.size() > 1)
+            System.out.println("Result 6: " + wordsDigit.get(1));
+        else if (wordsDigit.size() == 1)
+            System.out.println("Result 6: " + wordsDigit.get(0));
         else
-            if(words_dig.size()==1)
-                System.out.println("Result 6: "+words_dig.get(0));
-        else
-                System.out.println("Result 6: Word not found");
+            System.out.println("Result 6: Word not found");
     }
 }
