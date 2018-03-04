@@ -27,19 +27,19 @@ public class Strings {
     public void searchEndOutputOfTheShortestAndLongestStringAndTheirLength(ArrayList<String> arrayStrings) {
         String minLine = "";
         String maxLine = "";
-        int minlength = 1000000000;
-        int maxlength = 0;
+        int minLength = 1000000000;
+        int maxLength = 0;
         for (int i = 0; i < arrayStrings.size(); i++) {
-            if (arrayStrings.get(i).length() < minlength) {
+            if (arrayStrings.get(i).length() < minLength) {
                 minLine = arrayStrings.get(i);
-                minlength = arrayStrings.get(i).length();
+                minLength = arrayStrings.get(i).length();
             }
-            if (arrayStrings.get(i).length() > maxlength) {
+            if (arrayStrings.get(i).length() > maxLength) {
                 maxLine = arrayStrings.get(i);
-                maxlength = arrayStrings.get(i).length();
+                maxLength = arrayStrings.get(i).length();
             }
         }
-        System.out.println("Result 1: short string: " + minLine + " with length " + minlength + ", long string: " + maxLine + " with length " + maxlength);
+        System.out.println("Result 1: short string: " + minLine + " with length " + minLength + ", long string: " + maxLine + " with length " + maxLength);
     }
 
     /*Task 2_2*/
