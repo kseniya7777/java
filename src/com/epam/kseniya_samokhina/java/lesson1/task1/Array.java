@@ -20,7 +20,7 @@ public class Array {
         replacementOfNegativeNumbersByZeros(arr);
         tripleEachPositiveElementBeforeTheNegativeElement(arr);
         differenceBetweenTheArithmeticMeanAndTheMinimumElement(arr);
-        OutputAllElementsThatOccurMoreThanOnceAndWhosIndicesAreEven(arr);
+        outputAllElementsThatOccurMoreThanOnceAndWhosIndicesAreEven(arr);
     }
 
     /*Task 1_1*/
@@ -89,7 +89,7 @@ public class Array {
     }
 
     /*Task 1_6*/
-    public void OutputAllElementsThatOccurMoreThanOnceAndWhosIndicesAreEven(ArrayList<Integer> arr) {
+    public void outputAllElementsThatOccurMoreThanOnceAndWhosIndicesAreEven(ArrayList<Integer> arr) {
         HashMap<Integer, Integer> p = new HashMap<>();
         for (int i = 0; i < arr.size(); i++) {
             if (p.containsKey(arr.get(i))) {
