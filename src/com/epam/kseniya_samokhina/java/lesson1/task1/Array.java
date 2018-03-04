@@ -79,11 +79,11 @@ public class Array {
 
     /*Task 1_5*/
     public void differenceBetweenTheArithmeticMeanAndTheMinimumElement(ArrayList<Integer> arr) {
-        int sumall = 0;
+        int sumAll = 0;
         for (int i = 0; i < arr.size(); i++) {
-            sumall += arr.get(i);
+            sumAll += arr.get(i);
         }
-        int medium = sumall / arr.size();
+        int medium = sumAll / arr.size();
         int minElem = Collections.min(arr);
         System.out.println("Result 5: " + Math.abs(medium - minElem));
     }
