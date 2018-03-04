@@ -73,14 +73,14 @@ public class Strings {
     /*Task 2_4*/
     public void searchEndOutputTheFirstWordInWhichTheNumberOfDifferentCharactersIsMinimally(ArrayList<String> arrayStrings) {
         String word = "";
-        int minDifchar = 10000;
+        int minDifChar = 10000;
         for (int i = 0; i < arrayStrings.size(); i++) {
-            HashSet<Character> difchar = new HashSet<>();
+            HashSet<Character> difChar = new HashSet<>();
             for (int j = 0; j < arrayStrings.get(i).length(); j++) {
-                difchar.add(arrayStrings.get(i).charAt(j));
+                difChar.add(arrayStrings.get(i).charAt(j));
             }
-            if (difchar.size() < minDifchar) {
-                minDifchar = difchar.size();
+            if (difChar.size() < minDifChar) {
+                minDifChar = difChar.size();
                 word = arrayStrings.get(i);
             }
         }
@@ -91,11 +91,11 @@ public class Strings {
     public void searchEndOutputTheFirstWordInWhichAllTheCharactersAreDifferent(ArrayList<String> arrayStrings) {
         String word = "";
         for (int i = arrayStrings.size() - 1; i >= 0; i--) {
-            HashSet<Character> difchar = new HashSet<>();
+            HashSet<Character> difChar = new HashSet<>();
             for (int j = 0; j < arrayStrings.get(i).length(); j++) {
-                difchar.add(arrayStrings.get(i).charAt(j));
+                difChar.add(arrayStrings.get(i).charAt(j));
             }
-            if (difchar.size() == arrayStrings.get(i).length()) {
+            if (difChar.size() == arrayStrings.get(i).length()) {
                 word = arrayStrings.get(i);
             }
         }
